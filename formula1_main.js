@@ -107,21 +107,16 @@ function game_over() {
 
 function gameOver() {
     if (carro.vida <= 0) {
-        console.log("GAME OVER! Redirecionando...");
+        console.log("GAME OVER! Espere !!Redirecionamento!!");
         
-        // Pausa o jogo
         jogar = false;  
         motor.pause();
 
-        // Exibe mensagem na tela
-        alert("GAME OVER! Você perdeu.");
 
-        // Redireciona para a tela de morte
         window.location.href = "under.html";
     }
 }
 
-// Captura qualquer tecla pressionada e verifica se o jogo acabou
 document.addEventListener('keydown', () => {
     gameOver();
 });

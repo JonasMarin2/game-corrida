@@ -135,6 +135,13 @@ function colisao() {
     });
 }
 
+function deathclick() {
+    if (carro.vida <= 0) {
+        console.log("GAME OVER! Redirecionando...");
+        window.location.href = "under.html";
+    }
+}
+
 function desenha() {
     des.clearRect(0, 0, 1600, 900);
     t1.des_text('Tempo Vivo: ', 1250, 27, 'rgba(241, 4, 4, 0.8)', '30px Arial');  // Amarelo brilhante

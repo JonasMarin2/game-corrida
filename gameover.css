@@ -24,7 +24,7 @@ body {
 
 #gameover-text {
     font-size: 50px;
-    color: #00aaff; /* Azul claro, frio */
+    color: #00aaff; 
     font-weight: bold;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
 }

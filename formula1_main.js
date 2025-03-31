@@ -105,6 +105,27 @@ function game_over() {
     }
 }
 
+function gameOver() {
+    if (carro.vida <= 0) {
+        console.log("GAME OVER! Redirecionando...");
+        
+        // Pausa o jogo
+        jogar = false;  
+        motor.pause();
+
+        // Exibe mensagem na tela
+        alert("GAME OVER! Você perdeu.");
+
+        // Redireciona para a tela de morte
+        window.location.href = "under.html";
+    }
+}
+
+// Captura qualquer tecla pressionada e verifica se o jogo acabou
+document.addEventListener('keydown', () => {
+    gameOver();
+});
+
 function pontos() {
     enemyCars.forEach(car => {
         if (carro.point(car)) {
@@ -124,16 +145,6 @@ function colisao() {
     });
 }
 
-function colisao() {
-    enemyCars.forEach(car => {
-        if (carro.colid(car)) {
-            carro.vida -= 1;
-            console.log("Vida atual:", carro.vida); // Debug
-            car.recomeca();
-            batida.play();
-        }
-    });
-}
 
 document.addEventListener('keydown', () => {
     if (carro.vida <= 0) {

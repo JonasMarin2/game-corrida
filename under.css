@@ -1,0 +1,12 @@
+body {
+    background-image: url('./assets/undertale.gif');
+    background-size: cover;
+    background-position: 5px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}

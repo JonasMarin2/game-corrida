@@ -135,12 +135,12 @@ function colisao() {
     });
 }
 
-function deathclick() {
+document.addEventListener('keydown', () => {
     if (carro.vida <= 0) {
         console.log("GAME OVER! Redirecionando...");
         window.location.href = "under.html";
     }
-}
+});
 
 function desenha() {
     des.clearRect(0, 0, 1600, 900);
